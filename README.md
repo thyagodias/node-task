@@ -1,4 +1,4 @@
-# node-task
+# NodeTask
 Um simples gerenciador de tarefas construído em NodeJs
 
 ### Funcionalidades
