@@ -1,3 +1,5 @@
+import bcrypt from 'bcrypt'
+
 module.exports = (sequelize, DataType) => {
   const Users = sequelize.define(
     'Users',
@@ -33,9 +35,10 @@ module.exports = (sequelize, DataType) => {
     {
       classMethods: {
         associate: models => {
-          Users.hasMany(models.Task)
+          Users.hasMany(models.Tasks)
         }
       }
     }
   )
+  return Users
 }

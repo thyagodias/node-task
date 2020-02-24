@@ -12,18 +12,18 @@ module.exports = (sequelize, DataType) => {
         allowNull: false,
         validate: {
           notEmpty: true
-        },
-        done: {
-          type: DataType.BOOLEAN,
-          allowNull: false,
-          defaultValue: false
         }
+      },
+      done: {
+        type: DataType.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
       }
     },
     {
       classMethods: {
         associate: models => {
-          Task.belongsTo(models.Users)
+          Tasks.belongsTo(models.Users)
         }
       }
     }
